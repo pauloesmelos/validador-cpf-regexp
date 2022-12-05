@@ -1,0 +1,17 @@
+footer{
+    position: relative;
+    bottom: 0;
+    padding: 1.5rem;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    box-sizing: border-box;
+    box-shadow: 0 0 .2rem .1rem grey;
+    margin-top: 3rem;
+}
+footer p{
+    text-align: center;
+    font-weight: lighter;
+}
+.footer{
+    color: rgb(48, 92, 235);
+}

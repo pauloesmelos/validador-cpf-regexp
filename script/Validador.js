@@ -44,8 +44,8 @@ export default class ValidadorCPF{
             const input = event.target;
             if(value.length === 3 || value.length === 7)
                 input.value += '.';
-            else if(value.length === 12 && !value.includes('.'))
-                input.value += '-';                   
+            else if(value.length === 11 && value.includes('.'))
+                input.value += '-';       
         }
         this.input.addEventListener('input',setCaracteresInput);
     }
@@ -59,10 +59,13 @@ export default class ValidadorCPF{
     }
     validar(element){  //algoritmo pra ver se um cpf existe
         const cpfSujo = element.value;
+        let retorno = false;
         if(this.isValido(cpfSujo)){
             const cpfLimpo = this.limpar(cpfSujo);
             const validadorDigitos = new ValidadorDigitos(cpfLimpo);
+            retorno = validadorDigitos.cpfEhValido();
         }
+        return retorno;
     }
     //iniciando a classe
     init(){

@@ -1,0 +1,35 @@
+@media(max-width: 865px){
+    /*menu*/
+    .ul-nav{
+        display: block;
+        margin: 4rem 0 0 2.5rem;
+    }
+    .ul-nav li {
+        margin-bottom: .5rem;
+    }
+    
+    /*main*/
+
+
+    /*cpfs-validados*/
+    .cpfs-validados{
+        min-width: 80%;
+    }
+
+    /*footer*/
+    footer .logo{
+        position: relative;
+    }
+    footer p{
+        text-align: left;
+    }
+}
+
+@media(max-width: 400px){
+    [data-limpar]{
+        margin-top: 1rem;
+    }
+    #cpf{
+        min-width: 80%;
+    }
+}

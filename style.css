@@ -1,8 +1,15 @@
 @import './style/main.css';
 @import './style/menu.css';
+@import './style/footer.css';
+@import './style/cpfs-validados.css';
+@import './style/error.css';
+@import './style/media-query.css';
 
 *{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+}
+body{
+    background-color: rgb(235, 234, 232);
 }

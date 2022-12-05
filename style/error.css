@@ -1,0 +1,18 @@
+.div-error{
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.div-error.ativo{
+    visibility: visible;
+}
+.img-error{
+    height: 1.5rem;
+}
+.text-error{
+    font-size: 1.3rem;
+    color: rgb(216, 47, 18);
+    margin-left: 1rem;
+    font-weight: lighter;
+}

@@ -1,6 +1,27 @@
+.black{
+    color: #000;
+    font-weight: bolder;
+}
+.sobre{
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 25px;
+    margin: 5rem 0 0 5rem;
+}
+.sobre p{
+    max-width: 80%;
+    
+}
+.sobre ul li{
+    list-style-type: none;
+}
+.titulo-sobre{
+    color: rgb(84, 120, 238);
+}
+
 .div-formulario{    
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 label{
     display: block;
@@ -52,7 +73,7 @@ label::before{
 #cpf{
     padding: 1rem;
     width: 50%;
-    border: 1px solid #333;
+    border: 3px solid rgb(84, 120, 238);
     box-sizing: border-box;
     font-size: 1.3rem;
     text-align: center;

@@ -28,20 +28,58 @@
     </header>
 
     <main>
-        <div class="div-formulario">
-            <form name="formulario" method="" action="">
-                <label for="cpf">CPF</label>
-                <input type="text" placeholder="" name="cpf" id="cpf">
-                <div class="div-buttons">
-                    <button data-validar>Validar CPF</button>
-                    <button data-limpar>Limpar CPF</button>
+        <section class="sobre">
+            <h1 class="titulo-sobre">Como é formado um CPF?</h1>
+            <br>
+            <p>É possível descobrir em qual Estado o CPF foi emitido. Esse número corresponde ao último algarismo anterior aos dois dígitos de controle. No exemplo CPF nº <span class="black">000.000.008-00</span>, o número 8 mostra que esse documento foi emitido no estado de São Paulo.</p>
+            <p>Veja a tabela de códigos correspondentes a outros estados brasileiros:</p>
+            <br>
+            <ul>
+                <li><span class="black">1.</span> Distrito Federal, Goiás, Mato Grosso do Sul e Tocantins;</li>
+                <li><span class="black">2.</span> Pará, Amazonas, Acre, Amapá, Rondônia e Roraima;</li>
+                <li><span class="black">3.</span> Ceará, Maranhão e Piauí;</li>
+                <li><span class="black">4.</span> Pernambuco, Rio Grande do Norte, Paraíba e Alagoas;</li>
+                <li><span class="black">5.</span> Bahia e Sergipe;</li>
+                <li><span class="black">6.</span> Minas Gerais;</li>
+                <li><span class="black">7.</span> Rio de Janeiro e Espírito Santo;</li>
+                <li><span class="black">8.</span> São Paulo;</li>
+                <li><span class="black">9.</span> Paraná e Santa Catarina;</li>
+                <li><span class="black">0.</span> Rio Grande do Sul.</li>
+            </ol>
+        </section>
+        <section class="validar-cpf">
+            <div class="div-formulario">
+                <form name="formulario" method="" action="">
+                    <label for="cpf">CPF</label>
+                    <input type="text" placeholder="" name="cpf" id="cpf" autocomplete="off">
+                    <div class="div-buttons">
+                        <button data-validar>Validar CPF</button>
+                        <button data-limpar>Limpar Campo</button>
+                    </div>
+                </form>
+                <div class="div-error">
+                    <img src="./imagens/exclamacao.svg" class="img-error">
+                    <h2 class="text-error">Formato válido, porém o CPF não existe</h2>
                 </div>
-            </form>
-        </div>
+            </div>
+        </section>
+
+        <section class="cpfs-validados">
+            <div class="div-cpfs-validados">
+                <h1 class="titulo">CPFs Validados</h1>
+                <div class="pai-div-cpfs">
+                    <!--adicionar os filhos dinamicamente via js-->
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-
+        <div class="logo">
+            <h1 class="text footer">Verificador CPF</h1>
+            <img class="img-logo" src="./imagens/icone-verificado-verde.png">
+        </div>
+        <p>&copy; 2022 - feito por paulo melos | <a href="https://github.com/pauloesmelos" target="_blank">Contato</a></p>
     </footer>
     <script type="module" src="script.js"></script>
 </body>

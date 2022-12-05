@@ -1,0 +1,51 @@
+.cpfs-validados{
+    margin-top: 5rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div-cpfs-validados{
+    height: 80vh;
+    position: relative;
+    overflow-y: scroll;/**/
+}
+.copiar-alt{
+    height: 1.7rem;
+    cursor: pointer;
+}
+.copiar-alt:hover{
+    filter: opacity(0.1);
+}
+.titulo{
+    background-color: #329AFF;
+    padding: 1rem;
+    font-weight: lighter;
+    color: #fff;
+}
+.div-cpfs{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+.validado{
+    margin: .5rem 0 0 2rem;
+    font-size: 1.3rem;
+    color: #11c729;
+    font-weight: lighter;
+}
+.anima{
+    animation: animacao .5s forwards;
+}
+@keyframes animacao{
+    from{
+        opacity: 0;
+        transform: translate3d(-10rem,0,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
