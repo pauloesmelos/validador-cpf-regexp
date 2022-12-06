@@ -39,18 +39,9 @@ export default class ValidadorCPF{
                 evento.classList.add('inativo');
             }
         });
-        const setCaracteresInput = (event) => {
-            const value = event.target.value;
-            const input = event.target;
-            if(value.length === 3 || value.length === 7)
-                input.value += '.';
-            else if(value.length === 11 && value.includes('.'))
-                input.value += '-';       
-        }
-        this.input.addEventListener('input',setCaracteresInput);
     }
     criarErroSpan(target){
-        //inserindo um nó dinamicamente antes de um elemento do DOM
+        //inserindo um nó dinamicamente antes de um elemento do DOM >> insertBefore
         //const elemento = document.querySelector('#cpf').parentElement.insertBefore(noinserir,antesdoseguintenó)
         const span = document.createElement('span');
         span.innerText = '- Por favor, insira um CPF com 11 dígitos';

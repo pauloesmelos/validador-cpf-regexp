@@ -47,6 +47,7 @@ button_validar.addEventListener('click',(event) => {
     event.preventDefault();
     if(validador.validar(input_cpf)){
         createDivCpfValid(divPaiCpfsValidos);
+        formulario.nextElementSibling.classList.remove('ativo');
        /*  node.firstChild.nextElementSibling.innerText = input_cpf.value;
         divPaiCpfsValidos.appendChild(node);
         console.log(divCpfsValidos.children);
@@ -54,6 +55,7 @@ button_validar.addEventListener('click',(event) => {
     }
     else
         formulario.nextElementSibling.classList.add('ativo');
+    
 });
 button_limpar.addEventListener('click',(event) => {
     event.preventDefault();
@@ -72,9 +74,21 @@ input_cpf.addEventListener('input',inputIsEmpty);
 //função auxiliar que exclui um caracter do input ao pressionar tab(a função que cria os dígitos impede excluir a partir de . e -)
 const handleKeyPress = (event) => {
     let valor = event.target.value;
-    if(event.key === 'Backspace' && valor)
+    if(event.key === 'Backspace' && valor){
     //se contem . ou -, pegamos de 0 até tamanho - 1, se não pegamos de 0 até o tamanho de elementos no input
-    valor.includes('.') || valor.includes('-') ? event.target.value = valor.slice(0,valor.length - 1) : event.target.value = valor.slice(0,valor.length);
+        if(valor.slice(valor.length-1,valor.length) !== '.' && valor.slice(valor.length-1,valor.length) !== '-')
+            event.target.value = valor.slice(0,valor.length);
+        else if(valor.slice(valor.length - 1 ,valor.length) === '.' || valor.slice(valor.length - 1 ,valor.length === '-'))
+            event.target.value = valor.slice(0,valor.length - 1);
+    }
 }
-
 input_cpf.addEventListener('keyup',handleKeyPress);
+
+const handlePontoAndBarra = (event) => {
+    const valor = event.target.value;
+    if((event.target.value.length === 4 || event.target.value.length === 8) && valor.slice(valor.length - 1,valor.length) !== '.')
+        event.target.value = `${valor.slice(0,valor.length - 1)}.${valor.slice(valor.length - 1,valor.length)}`;
+    else  if((event.target.value.length === 12) && !event.target.value.includes('-'))
+        event.target.value = `${valor.slice(0,valor.length - 1)}-${valor.slice(valor.length - 1,valor.length)}`;
+}
+input_cpf.addEventListener('input',handlePontoAndBarra);
